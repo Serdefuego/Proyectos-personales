@@ -4,7 +4,7 @@
 document.getElementById("agregar").addEventListener("click",()=>{
     //capturo el value del <input> "descripccion" !importante accedo a su value! no al taxtContent
     let descripcion=document.getElementById("descripccion").value
-    if (descripcion==""){
+    if (descripcion.trim() == ""){
         alert("escriba una tarea")
     }else{
         //capturo en una variable el elemento <ul> ="lista"
@@ -26,6 +26,8 @@ document.getElementById("agregar").addEventListener("click",()=>{
         remover.addEventListener("click",()=>{
             tarea.remove()
     })
+     // Limpio el input luego de agragar la tarea
+        document.getElementById("descripccion").value = ""
     
     }
     
