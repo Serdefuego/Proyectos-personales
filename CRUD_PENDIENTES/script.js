@@ -25,7 +25,17 @@ document.getElementById("agregar").addEventListener("click",()=>{
         //capturo el click que se le hace al boton de remover
         remover.addEventListener("click",()=>{
             tarea.remove()
-    })
+        })
+         /*********************************************************************/
+        //creo el boton para editar el contenido de la tarea
+        let editar=document.createElement("button")
+        //le pongo nombre
+        editar.textContent="editar tarea"
+        tarea.append(editar)
+        editar.addEventListener("click",()=>{
+          let nuevoTexto=document.createElement(<input type="text"></input>)
+          descripcion.value=nuevoTexto.value
+        })    
      // Limpio el input luego de agragar la tarea
         document.getElementById("descripccion").value = ""
     
