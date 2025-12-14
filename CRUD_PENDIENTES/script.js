@@ -33,8 +33,16 @@ document.getElementById("agregar").addEventListener("click",()=>{
         editar.textContent="editar tarea"
         tarea.append(editar)
         editar.addEventListener("click",()=>{
-          let nuevoTexto=document.createElement(<input type="text"></input>)
-          descripcion.value=nuevoTexto.value
+        let nuevaInput = document.createElement("input")
+        nuevaInput.setAttribute("type","text")
+        nuevaInput.setAttribute("id","editt")
+        nuevaInput.value=tarea.firstChild.textContent
+        tarea.append(nuevaInput)
+        document.getElementById("editt").addEventListener("enter",()=>{
+            
+        })
+        
+
         })    
      // Limpio el input luego de agragar la tarea
         document.getElementById("descripccion").value = ""

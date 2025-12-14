@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cuentaganado</title>
+    <link rel="stylesheet" href="/contador/style/style.css">
+</head>
+<body>
+
+    <div id="contenedor">
+        <div>
+            <h1 id="conteo"></h1>
+        </div>
+        
+        <div class="operaciones"><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cuentaganado</title>
+</head>
+<body>
+
+    <div id="contenedor">
+        <div>
+            <h1 id="conteo"></h1>
+        </div>
+        
+        <div class="operaciones">
+            <input type="button" value="suma" id="sumar">
+            <input type="button" value="resta" id="restar">
+            <input type="button" value="resetear" id="reset">
+        </div>
+
+    </div>
+ 
+    
+    <script>
+        
+        //capturo el elemento h1 
+        let conteo=document.getElementById("conteo")
+        //inicializo una variable contador en 0
+        let contador=0
+        //le asigno el valor del contador al textContent del h1
+        conteo.textContent=contador
+
+        //capturo el evento del boton reset
+        document.getElementById("reset").addEventListener("click",()=>{
+            contador=0
+            conteo.textContent=contador  
+        })
+        //capturo el boton sumar donde incremento el contador en uno
+        //le asigno nuevamente el valor del contador al textcontent del h1
+        document.getElementById("sumar").addEventListener("click",()=>{
+            contador=contador+1
+            conteo.textContent=contador        
+        })
+        //capturo el boton restar donde decremento el contador en uno
+        //le asigno nuevamente el valor del contador al textcontent del h1
+        document.getElementById("restar").addEventListener("click",()=>{
+            //aqui evito numero negativos
+            if(contador<=0){
+                alert("no se aceptan numeros negativos")
+            }else{
+                contador=contador-1
+            }
+            
+            conteo.textContent=contador     
+        })
+
+
+    </script>
+</body>
+</html>
+            
